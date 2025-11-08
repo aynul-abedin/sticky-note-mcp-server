@@ -1,0 +1,122 @@
+{
+  "name": "AI Sticky Notes",
+  "identifier": "mcp-server-sticky-notes",
+  "version": "1.0.0",
+  "description": "AI-powered sticky notes with tagging, search, and roadmap generation via Model Context Protocol",
+  "author": {
+    "name": "aynul-abedin",
+    "github": "https://github.com/aynul-abedin"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aynul-abedin/sticky-note-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "notes",
+    "productivity",
+    "ai",
+    "tagging",
+    "search",
+    "task-management",
+    "fastmcp"
+  ],
+  "categories": [
+    "productivity",
+    "notes",
+    "ai-tools"
+  ],
+  "installation": {
+    "method": "pip",
+    "command": "pip install git+https://github.com/aynul-abedin/sticky-note-mcp-server.git"
+  },
+  "usage": {
+    "command": "python main.py",
+    "description": "Run the MCP server from the repository directory"
+  },
+  "capabilities": {
+    "tools": {
+      "count": 7,
+      "list": [
+        "add_note",
+        "read_notes",
+        "list_notes",
+        "search_notes",
+        "update_note",
+        "delete_note",
+        "clear_notes"
+      ]
+    },
+    "resources": {
+      "count": 3,
+      "list": [
+        "notes://latest",
+        "notes://pinned",
+        "notes://stats"
+      ]
+    },
+    "prompts": {
+      "count": 2,
+      "list": [
+        "note_summary_prompt",
+        "note_roadmap_prompt"
+      ]
+    },
+    "commands": {
+      "count": 5,
+      "list": [
+        "/summarize",
+        "/roadmap",
+        "/add-note",
+        "/search",
+        "/stats"
+      ]
+    }
+  },
+  "features": [
+    "Structured JSON storage with automatic migration",
+    "Tag-based organization and filtering",
+    "Pin important notes",
+    "Archive completed notes",
+    "Full-text search across content and tags",
+    "Paginated listing with filters",
+    "AI-powered summarization",
+    "AI-powered roadmap generation",
+    "User-friendly slash commands"
+  ],
+  "requirements": {
+    "python": ">=3.11",
+    "dependencies": [
+      "mcp[cli]>=1.18.0"
+    ]
+  },
+  "examples": [
+    {
+      "title": "Add a note",
+      "command": "add_note",
+      "params": {
+        "message": "Deploy v2.0",
+        "tags": "urgent,release",
+        "pinned": true
+      }
+    },
+    {
+      "title": "Search notes",
+      "command": "search_notes",
+      "params": {
+        "query": "deploy"
+      }
+    },
+    {
+      "title": "Generate summary",
+      "command": "/summarize"
+    }
+  ],
+  "screenshots": [],
+  "documentation": "https://github.com/aynul-abedin/sticky-note-mcp-server/blob/main/README.md",
+  "support": {
+    "issues": "https://github.com/aynul-abedin/sticky-note-mcp-server/issues",
+    "discussions": "https://github.com/aynul-abedin/sticky-note-mcp-server/discussions"
+  }
+}

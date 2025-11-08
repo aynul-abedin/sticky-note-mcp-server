@@ -1,0 +1,49 @@
+name: mcp-server-sticky-notes
+displayName: AI Sticky Notes
+description: AI-powered sticky notes with tagging, search, and roadmap generation
+version: 1.0.0
+author: aynul-abedin
+license: MIT
+homepage: https://github.com/aynul-abedin/sticky-note-mcp-server
+repository: https://github.com/aynul-abedin/sticky-note-mcp-server
+
+categories:
+  - productivity
+  - notes
+  - ai-tools
+
+install:
+  type: pip
+  package: git+https://github.com/aynul-abedin/sticky-note-mcp-server.git
+
+run:
+  command: python
+  args:
+    - main.py
+
+capabilities:
+  tools: 7
+  resources: 3
+  prompts: 2
+  commands: 5
+
+requirements:
+  python: ">=3.11"
+  
+tags:
+  - notes
+  - productivity
+  - ai
+  - tagging
+  - search
+  - fastmcp
+  - task-management
+
+features:
+  - Tag-based organization
+  - Pin important notes
+  - Archive completed items
+  - Full-text search
+  - AI-powered summaries
+  - Roadmap generation
+  - Slash commands
